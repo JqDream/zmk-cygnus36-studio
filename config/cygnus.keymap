@@ -22,14 +22,59 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
+        c1 {
+            bindings = <&kp N1>;
+            key-positions = <4 5>;
         };
 
-        to7 {
-            bindings = <&to 7>;
-            key-positions = <0 11>;
+        c2 {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <15 16>;
+        };
+
+        c3 {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <16 17>;
+        };
+
+        c4 {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <27 28>;
+        };
+
+        c5 {
+            bindings = <&kp N5>;
+            key-positions = <28 29>;
+        };
+
+        c6 {
+            bindings = <&kp NUMBER_6>;
+            key-positions = <18 19>;
+        };
+
+        c7 {
+            bindings = <&kp N7>;
+            key-positions = <19 20>;
+        };
+
+        c8 {
+            bindings = <&kp N8>;
+            key-positions = <20 21>;
+        };
+
+        c9 {
+            bindings = <&kp N9>;
+            key-positions = <30 31>;
+        };
+
+        c0 {
+            bindings = <&kp N0>;
+            key-positions = <31 32>;
+        };
+
+        cx {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <35 34>;
         };
     };
 
@@ -91,19 +136,19 @@
 
         default_layer {
             bindings = <
-&kp CAPS        &kp Q      &kp W         &kp E        &kp R  &kp T  &kp Y  &kp U  &kp I         &kp O    &kp P                &kp BACKSPACE
-&kp LEFT_SHIFT  &kp A      &kp S         &kp D        &kp F  &kp G  &kp H  &kp J  &kp K         &kp L    &as COLON SEMICOLON  &kp ENTER
-&kp LCTRL       &kp Z      &kp X         &kp C        &kp V  &kp B  &kp N  &kp M  &kp COMMA     &kp DOT  &as QUESTION SLASH   &kp RIGHT_SHIFT
-                &kp N1  &kp N2  &kp N3                            &kp N4  &kp N5    &kp N6
+&kp ESC           &kp Q  &kp W  &kp E      &kp R  &kp T      &kp Y      &kp U  &kp I            &kp O    &kp P           &kp BACKSPACE
+&kp CAPSLOCK      &kp A  &kp S  &kp D      &kp F  &kp G      &kp H      &kp J  &kp K            &kp L    &kp UP          &kp BACKSLASH
+&kp LS(LEFT_ALT)  &kp Z  &kp X  &kp C      &kp V  &kp B      &kp N      &kp M  &kp COMMA        &kp DOT  &kp LEFT_ARROW  &kp RIGHT
+                                &kp LCTRL  &mo 1  &kp ENTER  &kp SPACE  &mo 2  &kp RIGHT_SHIFT
             >;
         };
 
         lower_layer {
             bindings = <
-&none  &kp LG(D)  &kp LA(A)  &kp UP     &kp DELETE  &kp LA(F4)  &trans     &kp N7  &kp N8  &kp N9      &trans      &none
-&none  &kp LC(A)  &kp LEFT   &kp DOWN   &kp RIGHT   &xiayihang  &kp EQUAL  &kp N4  &kp N5  &kp N6      &kp N0      &none
-&none  &kp LC(Z)  &kp LC(X)  &kp RC(C)  &kp LC(V)   &kp LG(V)   &kp MINUS  &kp N1  &kp N2  &kp N3      &kp KP_DOT  &none
-       &trans     &trans     &trans                                                &kp N0  &kp KP_DOT  &trans
+&none  &kp LG(D)  &kp LA(A)  &kp UP     &kp DELETE  &kp LA(F4)  &trans     &kp N7      &kp N8  &kp N9  &trans      &none
+&none  &kp LC(A)  &kp LEFT   &kp DOWN   &kp RIGHT   &xiayihang  &kp EQUAL  &kp N4      &kp N5  &kp N6  &kp N0      &none
+&none  &kp LC(Z)  &kp LC(X)  &kp RC(C)  &kp LC(V)   &kp LG(V)   &kp MINUS  &kp N1      &kp N2  &kp N3  &kp KP_DOT  &none
+                             &trans     &trans      &trans      &kp N0     &kp KP_DOT  &trans
             >;
         };
 
@@ -112,7 +157,7 @@
 &trans  &trans     &none       &kp C_VOL_UP  &none       &trans          &kp QUESTION       &kp AMPS  &kp ASTERISK  &kp LPAR   &trans    &trans
 &trans  &kp CAPS   &kp C_PREV  &kp C_PP      &kp C_NEXT  &kp LGUI        &kp COLON          &kp DLLR  &kp PRCNT     &kp CARET  &kp RPAR  &trans
 &trans  &kp LCTRL  &kp TAB     &kp C_VOL_DN  &kp LALT    &kp LEFT_SHIFT  &kp DOUBLE_QUOTES  &kp EXCL  &kp AT        &kp HASH   &trans    &trans
-        &trans     &trans      &trans                                                                 &trans        &trans     &trans
+                               &trans        &trans      &trans          &trans             &trans    &trans
             >;
         };
 
@@ -121,7 +166,7 @@
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none                              &none  &none  &none
+                     &none  &none  &none  &none  &none  &none
             >;
         };
 
@@ -130,7 +175,7 @@
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none                              &none  &none  &none
+                     &none  &none  &none  &none  &none  &none
             >;
         };
 
@@ -139,7 +184,7 @@
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none                              &none  &none  &none
+                     &none  &none  &none  &none  &none  &none
             >;
         };
 
@@ -148,7 +193,7 @@
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none                              &none  &none  &none
+                     &none  &none  &none  &none  &none  &none
             >;
         };
 
@@ -157,7 +202,7 @@
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none
 &none  &bt BT_CLR    &none         &none         &none         &to 0         &none  &none  &none  &none  &none  &none
 &none  &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-       &none         &none         &none                                                   &none  &none  &none
+                                   &none         &none         &none         &none  &none  &none
             >;
         };
     };
