@@ -145,28 +145,28 @@
 
         lower_layer {
             bindings = <
-&none  &kp LG(D)  &kp LA(A)  &kp UP     &kp DELETE  &kp LA(F4)  &trans     &kp N7      &kp N8  &kp N9  &trans      &none
-&none  &kp LC(A)  &kp LEFT   &kp DOWN   &kp RIGHT   &xiayihang  &kp EQUAL  &kp N4      &kp N5  &kp N6  &kp N0      &none
-&none  &kp LC(Z)  &kp LC(X)  &kp RC(C)  &kp LC(V)   &kp LG(V)   &kp MINUS  &kp N1      &kp N2  &kp N3  &kp KP_DOT  &none
-                             &trans     &trans      &trans      &kp N0     &kp KP_DOT  &trans
+&kp TILDE     &kp LS(NUMBER_1)      &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)             &trans  &none  &none   &none  &trans  &none
+&kp TAB       &kp LS(LEFT_BRACKET)  &kp RS(COMMA)     &kp LS(NUMBER_6)  &kp RS(SEMI)      &kp RS(DOUBLE_QUOTES)  &none   &none  &none   &none  &none   &none
+&kp LEFT_GUI  &none                 &kp LS(N9)        &kp SEMICOLON     &kp RS(QUESTION)  &kp LS(NUMBER_1)       &none   &none  &none   &none  &none   &none
+                                                      &mo 3             &trans            &trans                 &none   &none  &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &trans     &none       &kp C_VOL_UP  &none       &trans          &kp QUESTION       &kp AMPS  &kp ASTERISK  &kp LPAR   &trans    &trans
-&trans  &kp CAPS   &kp C_PREV  &kp C_PP      &kp C_NEXT  &kp LGUI        &kp COLON          &kp DLLR  &kp PRCNT     &kp CARET  &kp RPAR  &trans
-&trans  &kp LCTRL  &kp TAB     &kp C_VOL_DN  &kp LALT    &kp LEFT_SHIFT  &kp DOUBLE_QUOTES  &kp EXCL  &kp AT        &kp HASH   &trans    &trans
-                               &trans        &trans      &trans          &trans             &trans    &trans
+&trans  &trans  &none  &none   &none   &trans  &kp RS(NUMBER_6)  &kp RS(N7)     &kp RS(ASTERISK)  &kp RS(N9)  &kp RS(N0)  &kp DEL
+&trans  &none   &none  &none   &none   &none   &kp MINUS         &kp EQUAL      &kp PG_UP         &kp HOME    &none       &trans
+&trans  &none   &none  &none   &none   &none   &kp RS(MINUS)     &kp RS(EQUAL)  &kp PAGE_DOWN     &kp END     &trans      &trans
+                       &trans  &trans  &trans  &trans            &trans         &mo 4
             >;
         };
 
         layer_3 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                     &none  &none  &none  &none  &none  &none
+&none  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none
+&none  &bt BT_CLR_ALL  &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
+&none  &none           &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
+                                     &none         &to 0         &none         &none  &none  &none
             >;
         };
 
@@ -175,7 +175,7 @@
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                     &none  &none  &none  &none  &none  &none
+                     &none  &to 0  &none  &none  &none  &none
             >;
         };
 
