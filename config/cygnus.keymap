@@ -145,28 +145,28 @@
 
         lower_layer {
             bindings = <
-&kp TILDE     &kp LS(NUMBER_1)      &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)             &trans  &none  &none   &none  &trans  &none
-&kp TAB       &kp LS(LEFT_BRACKET)  &kp RS(COMMA)     &kp LS(NUMBER_6)  &kp RS(SEMI)      &kp RS(DOUBLE_QUOTES)  &none   &none  &none   &none  &none   &none
-&kp LEFT_GUI  &none                 &kp LS(N9)        &kp SEMICOLON     &kp RS(QUESTION)  &kp LS(NUMBER_1)       &none   &none  &none   &none  &none   &none
-                                                      &mo 3             &trans            &trans                 &none   &none  &trans
+&kp TILDE     &kp LS(NUMBER_1)      &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&kp TAB       &kp LS(LEFT_BRACKET)  &kp RS(COMMA)     &kp LS(NUMBER_6)  &kp RS(SEMI)      &kp RS(DOUBLE_QUOTES)  &none         &none         &none         &none         &none         &none
+&kp LEFT_GUI  &none                 &kp LS(N9)        &kp SEMICOLON     &kp RS(QUESTION)  &kp LS(NUMBER_1)       &none         &none         &none         &none         &none         &none
+                                                      &mo 3             &trans            &trans                 &none         &none         &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &trans  &none  &none   &none   &trans  &kp RS(NUMBER_6)  &kp RS(N7)     &kp RS(ASTERISK)  &kp RS(N9)  &kp RS(N0)  &kp DEL
-&trans  &none   &none  &none   &none   &none   &kp MINUS         &kp EQUAL      &kp PG_UP         &kp HOME    &none       &trans
-&trans  &none   &none  &none   &none   &none   &kp RS(MINUS)     &kp RS(EQUAL)  &kp PAGE_DOWN     &kp END     &trans      &trans
-                       &trans  &trans  &trans  &trans            &trans         &mo 4
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &kp RS(NUMBER_6)  &kp RS(N7)     &kp RS(ASTERISK)  &kp RS(N9)  &kp RS(N0)  &kp DEL
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp MINUS         &kp EQUAL      &kp PG_UP         &kp HOME    &none       &trans
+&trans  &none   &none   &none    &none    &none    &kp RS(MINUS)     &kp RS(EQUAL)  &kp PAGE_DOWN     &kp END     &trans      &trans
+                        &trans   &trans   &trans   &trans            &trans         &mo 4
             >;
         };
 
         layer_3 {
             bindings = <
-&none  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none
-&none  &bt BT_CLR_ALL  &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-&none  &none           &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
-                                     &none         &to 0         &none         &none  &none  &none
+&none  &none  &none  &none  &kp KP_PLUS      &kp KP_SUBTRACT  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none  &none
+&none  &none  &none  &none  &kp KP_MULTIPLY  &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none  &none
+&none  &none  &none  &none  &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none  &none
+                     &none  &to 0            &kp ENTER        &none            &none            &none
             >;
         };
 
